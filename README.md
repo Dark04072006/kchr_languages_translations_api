@@ -1,6 +1,6 @@
 # KCHR Languages Translations API
 
-Welcome to the KCHR Languages Translations API! This project serves as an API dictionary for Russian to Caucasian expressions. Currently, it supports the Cherkess and Karachay languages. The API provides a single endpoint for translations.
+Welcome to the KCHR Languages Translations API! This project serves as an API dictionary for Russian to Caucasian expressions. Currently, it supports the Circassian and Karachay languages. The API provides a single endpoint for translations.
 
 ## Getting Started
 
@@ -27,7 +27,7 @@ Make sure you have Python installed. You can download it from [python.org](https
    pip install -r requirements.txt
    ```
 
-Before running the API, make sure to set the required environment variables in `src/scripts/start.sh`:
+Before running the API, make sure to set the required environment variables in `start.sh`:
 
 ```bash
 export DB_URL=REQUIRED
@@ -36,7 +36,7 @@ export SECRET_KEY=REQUIRED
 
 ## Usage
 
-Run the API server using the `src/scripts/start.sh` script:
+Run the API server using the `start.sh` script:
 ```bash
 cd src && bash scripts/start.sh
 ```
@@ -50,7 +50,7 @@ The API will be accessible at `http://localhost:8000`.
 This endpoint accepts the following query parameters:
 
 - `word`: The word to search for translations.
-- `variation`: The translation variation, e.g., `ru-cs` (Russian to Cherkess), `ru-kr` (Russian to Karachay), `kr-ru` (Karachay to Russian), `cs-ru` (Cherkess to Russian).
+- `variation`: The translation variation, e.g., `ru-cs` (Russian to Circassian), `ru-kr` (Russian to Karachay), `kr-ru` (Karachay to Russian), `cs-ru` (Circassian to Russian).
 - `offset`: Offset for retrieving data from the database.
 - `limit`: Limit for the number of results to retrieve (the difference between `offset` and `limit` should not exceed 20).
 
