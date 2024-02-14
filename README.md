@@ -14,7 +14,7 @@ Make sure you have Python installed. You can download it from [python.org](https
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/{username}/kchr_languages_translations_api.git
+   git clone https://github.com/Dark04072006/kchr_languages_translations_api.git
    ```
 
 2. Navigate to the project directory:
