@@ -1,6 +1,8 @@
 #!/bin/bash
 
-export DB_URL=REQUIRED
+export DB_URL=files/kchr_translations.db
 export SECRET_KEY=REQUIRED
 
-exec python -m app.main
+source .venv/bin/activate
+cd src
+exec gunicorn -w 4 'app.main.__main__:create_app()'
