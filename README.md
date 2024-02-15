@@ -61,14 +61,13 @@ GET /translations/?word=example&variation=ru-cs&offset=0&limit=10
 
 **Example Response:**
 ```json
-{
-  "translations": [
+[
     {
-      "word": "example",
-      "translation": "пример",
-      "language": "ru-cs"
+        "id": 1,
+        "word": "привет",
+        "translation": "сэлам",
+        "variation": "ru-cs"
     },
     // More translations...
-  ]
-}
+]
 ```
