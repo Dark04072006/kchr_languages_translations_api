@@ -27,7 +27,7 @@ Make sure you have Python installed. You can download it from [python.org](https
    pip install -r requirements.txt
    ```
 
-Before running the API, make sure to set the required environment variables in `start.sh`:
+Before running the API, make sure to set the required environment variables in `src/scripts/start.sh`:
 
 ```bash
 export DB_URL=REQUIRED
@@ -36,9 +36,9 @@ export SECRET_KEY=REQUIRED
 
 ## Usage
 
-Run the API server using the `start.sh` script:
+Run the API server using the `src/scripts/start.sh` script:
 ```bash
-cd src && bash scripts/start.sh
+bash src/scripts/start.sh
 ```
 
 The API will be accessible at `http://localhost:8000`.
