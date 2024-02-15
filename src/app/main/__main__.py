@@ -1,18 +1,16 @@
-import uvicorn
-from fastapi import FastAPI
+import gunicorn
+from flask import Flask
 
-from dishka.integrations.fastapi import DishkaApp
+from dishka.integrations.flask import setup_dishka
 
-from app.web.routes import router
+from app.web.routes import blueprint
 from app.main.ioc import DbAdaptersProvider
 
 
-def create_app() -> DishkaApp:
-    fastapi_app = FastAPI()
-    fastapi_app.include_router(router)
+def create_app() -> Flask:
+    flask_app = Flask(__name__)
+    flask_app.register_blueprint(blueprint)
 
-    return DishkaApp(providers=[DbAdaptersProvider()], app=fastapi_app)
+    setup_dishka(providers=[DbAdaptersProvider()], app=flask_app)
 
-
-if __name__ == "__main__":
-    uvicorn.run(create_app())
+    return flask_app
