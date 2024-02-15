@@ -56,7 +56,7 @@ This endpoint accepts the following query parameters:
 
 **Example Request:**
 ```http
-GET /translations/?word=example&variation=ru-cs&offset=0&limit=10
+GET /translations/?word=привет&variation=ru-cs&offset=0&limit=10
 ```
 
 **Example Response:**
