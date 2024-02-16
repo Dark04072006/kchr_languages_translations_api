@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DB_URL=files/kchr_translations.db
+export DB_URL=REQUIRED
 export SECRET_KEY=REQUIRED
 
 source .venv/bin/activate
